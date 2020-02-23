@@ -1,0 +1,38 @@
+.postsBlock {
+  padding: 15px 30px;
+}
+
+.postsBlockTitle {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #071672;
+}
+
+.newPostBlock {
+  padding-bottom: 30px;
+}
+
+.newPostArea {
+  max-width: 80%;
+  width: 80%;
+  height: 70px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  resize: none;
+  border-radius: 6px;
+}
+
+.addButton {
+  outline: none;
+  border: none;
+  padding: 12px 30px;
+  background-color: #071672;
+  color: #FFB700;
+  border-radius: 6px;
+}
+
+.addButton:active {
+  background-color: #4B5ED7;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .50);
+}

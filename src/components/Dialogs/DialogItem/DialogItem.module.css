@@ -1,0 +1,13 @@
+.dialogWrapper {
+  padding: 5px;
+}
+
+.dialog {
+  color: #172CAF;
+  text-decoration: none;
+}
+
+.active {
+  color: #FFB700;
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+.item {
+  padding: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24px;
+}
+
+.link{
+  color: #172CAF;
+  text-decoration: none;
+}
+
+.active {
+  color: #FFB700;
+}

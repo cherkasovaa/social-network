@@ -1,0 +1,28 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+}
+
+.item {
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  padding: 10px 10px 0;
+  max-width: 80%;
+  width: 50%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.likesCounter {
+  color: #071672;
+  font-size: 12px;
+  text-align: right;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+}
