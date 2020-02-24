@@ -12,3 +12,28 @@
 .messages {
   padding: 10px;
 }
+
+.newMessageArea {
+  max-width: 80%;
+  width: 80%;
+  height: 70px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  resize: none;
+  border-radius: 6px;
+  color: #4B5ED7;
+}
+
+.newMessageArea:focus {
+  outline: none;
+  border: 1px solid #071672;
+}
+
+.addButton {
+  outline: none;
+  border: none;
+  padding: 12px 60px;
+  background-color: #071672;
+  color: #FFB700;
+  border-radius: 6px;
+}
