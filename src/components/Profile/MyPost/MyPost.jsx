@@ -9,12 +9,12 @@ const MyPost = (props) => {
 
   const addNewPost = () => {
     createNewPost.current.value = '';
-    props.addPost();
+    props.dispatch({type: 'ADD-POST'});
   }
 
   const onPostChange = () => {
     let text = createNewPost.current.value;
-    props.updateNewPost(text);
+    props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newPost: text});
   }
 
   return (
