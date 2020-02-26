@@ -3,7 +3,7 @@ import style from './Navbar.module.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 const Navbar = (props) => {
-    let navlinks = props.data.navigationData.map((link) => <NavigationItem info={link}/>);
+    let navlinks = props.sidebar.navigationData.map((link) => <NavigationItem info={link}/>);
 
     return (
         <aside className={style.nav}>
