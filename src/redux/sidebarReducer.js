@@ -1,5 +1,5 @@
 let initialState = {
-  navigationData: [
+  navigation: [
     { path: '/profile', item: 'Profile'},
     { path: '/dialogs', item: 'Messages'},
     { path: '/news', item: 'News'},

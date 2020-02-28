@@ -3,7 +3,7 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 let initialState = {
   newPostText: '',
-      postData: [
+      posts: [
         {id: 1, message: 'I"m fine', likesCounter: 4},
         {id: 2, message: 'Hello, it is my first post', likesCounter: 13}
       ]
@@ -17,7 +17,7 @@ const profileReduser = (state = initialState, action) => {
         likesCounter: 0
       };
       state.newPostText = '';
-      state.postData.push(newPost);
+      state.posts.push(newPost);
       return state;
     case UPDATE_NEW_POST_TEXT:
       state.newPostText = action.newPost;
