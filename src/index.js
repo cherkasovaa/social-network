@@ -4,9 +4,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import store from './redux/reduxStore.js';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from './components/StoreContext';
 
 let rendererEntireTree = (state) =>  {
-  ReactDOM.render(<App state={state} dispatch={store.dispatch.bind(store)} store={store}/>, document.getElementById('root'));
+  ReactDOM.render(
+    <BrowserRouter>
+      <Provider store={store}>
+        <App/>
+      </Provider>
+    </BrowserRouter>, document.getElementById('root'));
 }
 
 rendererEntireTree(store.getState());
