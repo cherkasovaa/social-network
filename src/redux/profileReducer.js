@@ -16,12 +16,16 @@ const profileReduser = (state = initialState, action) => {
         message: state.newPostText,
         likesCounter: 0
       };
-      state.newPostText = '';
-      state.posts.push(newPost);
-      return state;
+      return {
+        ...state,
+        posts: [...state.posts, newPost],
+        newPostText: ''
+      };
     case UPDATE_NEW_POST_TEXT:
-      state.newPostText = action.newPost;
-      return state;
+      return {
+        ...state,
+        newPostText: action.newPost
+      };
     default:
       return state;
   }

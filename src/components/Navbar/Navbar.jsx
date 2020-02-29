@@ -1,23 +1,16 @@
 import React from 'react';
 import style from './Navbar.module.css';
 import NavigationItem from './NavigationItem/NavigationItem';
-import StoreContext from '../StoreContext';
 
-const Navbar = () => {
+const Navbar = (props) => {
+    let state = props.state.getState().sidebar;
+    let navlinks = state.navigation.map((link) => <NavigationItem path={link.path} item={link.item} key={link.item}/>);
+
     return (
-        <StoreContext.Consumer>
-            {(store) => {
-                let state = store.getState().sidebar;
-                let navlinks = state.navigation.map((link) => <NavigationItem info={link}/>);
-                return (
-                    <aside className={style.nav}>
-                        {navlinks}
-                    </aside>
-                );
-            }
-        }
-        </StoreContext.Consumer>
-    )
+        <aside className={style.nav}>
+            {navlinks}
+        </aside>
+    );
 }
 
 export default Navbar;

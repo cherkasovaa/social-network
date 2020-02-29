@@ -3,7 +3,7 @@ import Post from './Post/Post';
 import style from './MyPost.module.css';
 
 const MyPost = (props) => {
-  let posts = props.posts.map( ({message, likesCounter}) => (<Post message={message} counter={likesCounter} />));
+  let posts = props.posts.map( (post) => (<Post message={post.message} counter={post.likesCounter} key={post.id} />));
   let createNewPost = React.createRef();
 
   const onAddPost = () => {

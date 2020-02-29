@@ -9,11 +9,11 @@ import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import { Route } from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
     <div className="app-wrapper">
       <Header />
-      <Navbar />
+      <Navbar state={props.store}/>
       <main className="app-wrapper-content">
         <Route path='/profile' render={ () => <Profile />} />
         <Route path='/dialogs' render={() => <DialogsContainer />} />

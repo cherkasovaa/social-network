@@ -1,7 +1,8 @@
-const UPDATE_NEW_MESSAGE_TEXT = 'UPADE-NEW-MESSAGE-TEXT';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 const SEND_MESSAGE = 'SEND-MESSAGE';
 
 let initialState = {
+  newMessageText: '',
   dialogs: [
     {name: 'Dima', id: 1},
     {name: 'Viktor', id: 2},
@@ -10,20 +11,23 @@ let initialState = {
   messages: [
     {id: 1, message: 'Hello'},
     {id: 2, message: 'Hi, how are YOU?'},
-    {id: 3, message: 'Welcome!'}],
-  newMessageText: ''
+    {id: 3, message: 'Welcome!'}]
 };
 
 const dialogsReduser = (state = initialState, action) => {
   switch(action.type){
     case UPDATE_NEW_MESSAGE_TEXT:
-      state.newMessageText = action.newText;
-      return state;
+      return {
+        ...state,
+        newMessageText: action.newText
+      };
     case SEND_MESSAGE:
       let body = state.newMessageText;
-      state.newMessageText = '';
-      state.messages.push({ id: 6, message: body });
-      return state;
+      return {
+        ...state,
+        newMessageText: '',
+        messages: [...state.messages, { id: 6, message: body }]
+      };
     default:
       return state;
   }
