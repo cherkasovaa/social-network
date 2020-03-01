@@ -1,0 +1,73 @@
+.usersPage {
+  padding: 50px;
+}
+
+.userWrapper {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  padding-bottom: 20px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+}
+
+.avatarWrapper {
+  margin-right: 10px;
+  text-align: center;
+}
+
+.userInfo {
+  max-width: 70%;
+  width: 70%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+}
+
+.btnFollow,
+.btnUnfollow {
+  outline: none;
+  border: none;
+  padding: 12px 0;
+  width: 100px;
+  color: #FFB700;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btnFollow {
+  background-color: #071672;
+}
+
+.btnUnfollow {
+  background-color: #411e69;
+}
+
+.btnFollow:active,
+.btnUnfollow:active {
+  background-color: #4B5ED7;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .50);
+}
+
+.text {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #071672;
+}
+
+.fullname {
+  font-size: 16px;
+}
+
+.location {
+  font-size: 12px;
+  text-align: right;
+}

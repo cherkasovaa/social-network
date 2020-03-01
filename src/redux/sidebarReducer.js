@@ -2,6 +2,7 @@ let initialState = {
   navigation: [
     { path: '/profile', item: 'Profile'},
     { path: '/dialogs', item: 'Messages'},
+    { path: '/users', item: 'Users'},
     { path: '/news', item: 'News'},
     { path: '/music', item: 'Music'},
     { path: '/settings', item: 'Settings'}

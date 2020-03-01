@@ -30,6 +30,7 @@
   background-color: #071672;
   color: #FFB700;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .addButton:active {
