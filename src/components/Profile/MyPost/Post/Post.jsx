@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Post.module.css';
+import userAva from '../../../../assets/images/default_avatar.jpg';
 
 const Post = (props) => {
   return (
     <div className={styles.wrapper}>
-      <img className={styles.avatar} src = "https://image.freepik.com/free-vector/_8169-228.jpg" alt="logo" />
+      <img className={styles.avatar} src={userAva} alt="logo" />
       <div className={styles.item}>
         {props.message}
         <p className={styles.likesCounter}>{props.counter} likes</p>
