@@ -13,6 +13,7 @@ const Users = props => {
       <div>
         {pages.map(page => (
           <span
+            key={page.id}
             className={(props.currentPage === page && style.selectedPage) || style.pagginator}
             onClick={e => {
               props.onChangedpage(page);
