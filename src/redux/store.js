@@ -18,7 +18,8 @@ let store = {
       posts: [
         { id: 1, message: 'I"m fine', likesCounter: 4 },
         { id: 2, message: 'Hello, it is my first post', likesCounter: 13 }
-      ]
+      ],
+      profile: null
     },
     messagesPage: {
       dialogsData: [

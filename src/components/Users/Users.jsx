@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Users.module.css';
 import userAva from '../../assets/images/default_avatar.jpg';
+import { NavLink } from 'react-router-dom';
 
 const Users = props => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -12,9 +13,7 @@ const Users = props => {
     <div className={style.usersPage}>
       <div>
         {pages.map(page => (
-          <span
-            key={page.id}
-            className={(props.currentPage === page && style.selectedPage) || style.pagginator}
+          <span key={page.id} className={(props.currentPage === page && style.selectedPage) || style.pagginator}
             onClick={e => {
               props.onChangedpage(page);
             }}
@@ -27,11 +26,13 @@ const Users = props => {
         return (
           <div key={user.id} className={style.userWrapper}>
             <div className={style.avatarWrapper}>
+              <NavLink to={'/profile/' + user.id}>
               <img
                 className={style.avatar}
                 src={user.photos.small != null ? user.photos.small : userAva}
                 alt='avatar'
               />
+              </NavLink>
               {user.followed ? (
                 <button
                   className={style.btnUnfollow}
